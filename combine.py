@@ -2,11 +2,11 @@ from PIL import Image
 import numpy as np
 from deeplabv3 import DeepLabModel
 from trimap import trimap
-import sys
+import sys, os
 sys.path.insert(1, 'FBA_Matting')
 from networks.models import build_model
 from demo import pred
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 MODEL = DeepLabModel("deeplabv3_pascal_trainval_2018_01_04.tar.gz")
 
 class Args:
