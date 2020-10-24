@@ -4,7 +4,8 @@ import networks.resnet_GN_WS as resnet_GN_WS
 import networks.layers_WS as L
 import networks.resnet_bn as resnet_bn
 
-CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+# CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+CUDA_DEVICE = 'cpu'
 def build_model(args):
     builder = ModelBuilder()
     net_encoder = builder.build_encoder(arch=args.encoder)
