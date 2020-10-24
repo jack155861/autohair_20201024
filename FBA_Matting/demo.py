@@ -12,7 +12,8 @@ import cv2
 import numpy as np
 import torch
 
-CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+# CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+CUDA_DEVICE = 'cpu'
 def np_to_torch(x):
     val = torch.from_numpy(x).permute(2, 0, 1)[None, :, :, :].float()
     if CUDA_DEVICE == 'gpu':
