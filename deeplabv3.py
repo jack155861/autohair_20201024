@@ -2,7 +2,7 @@ import numpy as np
 import tensorflow as tf
 import tarfile, os
 from PIL import Image
-
+os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
 class DeepLabModel(object):
   """Class to load deeplab model and run inference."""
 
