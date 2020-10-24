@@ -3,7 +3,8 @@ import numpy as np
 import torch
 import cv2
 
-CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+# CUDA_DEVICE = 'gpu' if torch.cuda.is_available() else 'cpu'
+CUDA_DEVICE = 'cpu'
 def dt(a):
     return cv2.distanceTransform((a * 255).astype(np.uint8), cv2.DIST_L2, 0)
 
